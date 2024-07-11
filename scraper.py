@@ -2,6 +2,7 @@ import json
 import time
 from datetime import datetime
 from pathlib import Path
+from multiprocessing import Pool
 
 import pandas as pd
 import regex as re
@@ -13,23 +14,42 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
 
+def transform_date(date):
+    if "il y a" or "aujourd'hui" in date:
+        d = datetime.today()
+        date = f"{d.day}/{d.month}/{d.year}"
+    elif "hier" in date:
+        d = datetime.today()
+        date = f"{d.day-1}/{d.month}/{d.year}"
+    else:
+        d = date.split("à")[0].split(" ")
+        date = f"{d[0]}/{d[1].lower().replace('.', '')}/{d[2]}"
+    return date
+
 #TODO
 # write click function
-# preprocess textual data properly (NBSP tag?) + preprocessing function
+# preprocessing function
+# add type into arguments defition
 # refactor code properly
+# transform date properly
 # add comments
 
 class Scraper:
     def __init__(self, rtbf_url):
         self.dataset_file = "dataset_rtbf.csv"
         self.rtbf_url_prefix = "https://www.rtbf.be"
+        self.title_xpath = "//*[@id='id-text2speech-article']/div[1]/header/div[1]/div/h1"
+        self.date_xpath = "//*[@id='id-text2speech-article']/div[1]/header/div[3]/div/div/div[1]/span[1]"
+        self.content_xpath = '//*[@id="content"]/div/div/div'
+        self.reading_time_xpath = "//*[@id='id-text2speech-article']/div[1]/header/div[3]/div/div/div[1]/span[3]/time"
+        self.tags_xpath = "//*[@id='id-text2speech-article']/div[7]/div/ul"
         self.en_continu_url = rtbf_url
-        self.processed_urls = set()
+
         try:
             df = pd.read_csv(self.dataset_file, sep="\t")
-            self.processed_urls_ids = set(df['ID'].tolist())
+            self.processed_urls = set([url.replace(self.rtbf_url_prefix, "") for url in df['URL'].tolist()])
         except:
-            self.processed_urls_ids = set()
+            self.processed_urls = set()
 
     def scrape(self):
         not_encountered = True
@@ -67,58 +87,80 @@ class Scraper:
             time.sleep(2)
             soup = BeautifulSoup(en_continu_driver.page_source, "lxml")
             # Process and save the data as needed
-            article_driver = webdriver.Chrome()
 
             articles_urls = [url.get('href') for url in soup.find_all('a') if "article" in url.get('href')]
             to_process_urls = set(articles_urls).difference(set(self.processed_urls))
-            #TODO multiprocess scraping of 20 new urls
-            for url in to_process_urls:
-                current_id = re.split("-", url)[-1]
-                if current_id not in self.processed_urls_ids:
-                    self.get_article_content(url, article_driver)
-                else:
-                    not_encountered = False
-                    break
-        en_continu_driver.quit()
-        article_driver.quit()
+            print(len(to_process_urls))
+            if len(to_process_urls) > 0:
+                with Pool(processes=4) as pool:
+                    results = pool.map(self.get_article_content_multi, to_process_urls)
+                    self.update_csv_multi(results, to_process_urls)
 
-    def get_article_content(self, url, driver):
-        content_xpath = '//*[@id="content"]/div/div/div'
+        en_continu_driver.quit()
+
+    def get_textual_content_from_xpath(self, driver, xpath):
+        wait = WebDriverWait(driver, 10)
+        try:
+            element = wait.until(EC.presence_of_element_located((By.XPATH, xpath)))
+            html = element.get_attribute('outerHTML')
+            soup = BeautifulSoup(html, 'lxml')
+            text = soup.get_text().strip()
+            cleaned_text = re.sub(r'\u00A0', ' ', text)
+            return cleaned_text
+        except Exception as e:
+            print(e)
+            return ""
+
+    def get_list_content_from_xpath(self, driver, xpath):
+        wait = WebDriverWait(driver, 10)
+        try:
+            element = wait.until(EC.presence_of_element_located((By.XPATH, xpath)))
+            html = element.get_attribute('outerHTML')
+            soup = BeautifulSoup(html, 'lxml')
+            ul_list = soup.find('ul')
+            return [li.text for li in ul_list.find_all('li')]
+        except Exception as e:
+            print(e)
+            return []
+
+    def get_article_content_multi(self, url):
+        driver = webdriver.Chrome()
         complete_url = self.rtbf_url_prefix+url
         driver.get(complete_url)
-        soup = BeautifulSoup(driver.page_source, "lxml")
-        time.sleep(2)
-        title = soup.find("title").text
-        wait = WebDriverWait(driver, 10)
-        element = wait.until(EC.presence_of_element_located((By.XPATH, content_xpath)))
-        html = element.get_attribute('outerHTML')
-        soup = BeautifulSoup(html, 'lxml')
-        text = soup.get_text().strip()
-        self.update_csv(title, text, url, complete_url)
 
-    def update_csv(self, title, text, url, complete_url):
+        title = self.get_textual_content_from_xpath(driver, self.title_xpath)
+        date = self.get_textual_content_from_xpath(driver, self.date_xpath)
+        content = self.get_textual_content_from_xpath(driver, self.content_xpath)
+        reading_time = self.get_textual_content_from_xpath(driver, self.reading_time_xpath)
+        tags = self.get_list_content_from_xpath(driver, self.tags_xpath)
+
         d = datetime.today()
         pattern = r'[\t\n]'
         url_id = re.split("-", complete_url)[-1]
-        data = [{
+
+        data = {
             'ID': url_id,
             'URL': complete_url,
             'Title': re.sub(pattern, ' ', title).replace("- RTBF Actus", ""),
-            'Text': re.sub(pattern, ' ', text),
+            'Text': re.sub(pattern, ' ', content),
+            'PublishDate': transform_date(date),
+            'Tags': ",".join(tags),
+            'ReadingTime': reading_time.replace("min", "").strip(),
             'ExtractionDate': f"{d.day}/{d.month}/{d.year}"
-        }]
+        }
 
-        if url_id not in self.processed_urls_ids:
-            file_path = Path(self.dataset_file)
-            if file_path.exists():
-                df = pd.read_csv(self.dataset_file, sep="\t")
-                new_df = pd.concat([df, pd.DataFrame(data)], ignore_index=True)
-            else:
-                new_df = pd.DataFrame(data)
+        driver.quit()
+        return data
 
+    def update_csv_multi(self, docs, urls):
+        file_path = Path(self.dataset_file)
+        if file_path.exists():
+            df = pd.read_csv(self.dataset_file, sep="\t")
+            new_df = pd.concat([df, pd.DataFrame(docs)], ignore_index=True)
+        else:
+            new_df = pd.DataFrame(docs)
         new_df.to_csv(self.dataset_file, index=False, encoding='utf-8', sep="\t")
-        self.processed_urls_ids.add(url_id)
-        self.processed_urls.add(url)
+        self.processed_urls.update(urls)
 
 
 if __name__ == "__main__":
