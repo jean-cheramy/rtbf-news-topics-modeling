@@ -1,11 +1,13 @@
 import json
 import time
+import html
 from datetime import datetime
-from pathlib import Path
 from multiprocessing import Pool
+from pathlib import Path
 
 import pandas as pd
 import regex as re
+import requests
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
@@ -14,36 +16,31 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
 
-def transform_date(date):
-    if "il y a" or "aujourd'hui" in date:
-        d = datetime.today()
-        date = f"{d.day}/{d.month}/{d.year}"
-    elif "hier" in date:
-        d = datetime.today()
-        date = f"{d.day-1}/{d.month}/{d.year}"
-    else:
-        d = date.split("à")[0].split(" ")
-        date = f"{d[0]}/{d[1].lower().replace('.', '')}/{d[2]}"
-    return date
-
-#TODO
-# write click function
-# preprocessing function
-# add type into arguments defition
 # refactor code properly
-# transform date properly
 # add comments
+# stop scraping when encounters processed url
+
+def click(driver, xpath: str):
+    # Find the button
+    button = WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable((By.XPATH, xpath))
+    )
+    # Move to the element before clicking
+    actions = ActionChains(driver)
+    actions.move_to_element(button).perform()
+    time.sleep(1)
+    # Click the "Load More" button
+    button.click()
+    time.sleep(1)
+
 
 class Scraper:
-    def __init__(self, rtbf_url):
+    def __init__(self, rtbf_url: str):
         self.dataset_file = "dataset_rtbf.csv"
         self.rtbf_url_prefix = "https://www.rtbf.be"
-        self.title_xpath = "//*[@id='id-text2speech-article']/div[1]/header/div[1]/div/h1"
-        self.date_xpath = "//*[@id='id-text2speech-article']/div[1]/header/div[3]/div/div/div[1]/span[1]"
-        self.content_xpath = '//*[@id="content"]/div/div/div'
-        self.reading_time_xpath = "//*[@id='id-text2speech-article']/div[1]/header/div[3]/div/div/div[1]/span[3]/time"
-        self.tags_xpath = "//*[@id='id-text2speech-article']/div[7]/div/ul"
         self.en_continu_url = rtbf_url
+        self.load_more_xpath = "//*[@id='reach-skip-nav']/div[4]/div/div/div/div/button"
+        self.cookies_xpath = "//*[@id='didomi-notice-agree-button']"
 
         try:
             df = pd.read_csv(self.dataset_file, sep="\t")
@@ -52,107 +49,59 @@ class Scraper:
             self.processed_urls = set()
 
     def scrape(self):
-        not_encountered = True
         en_continu_driver = webdriver.Chrome()
         en_continu_driver.get(self.en_continu_url)
-        # click cookies button: //*[@id="didomi-notice-agree-button"]
-        cookies_button = WebDriverWait(en_continu_driver, 10).until(
-            EC.element_to_be_clickable((By.XPATH, "//*[@id='didomi-notice-agree-button']"))
-        )
-        # Move to the element before clicking
-        actions = ActionChains(en_continu_driver)
-        actions.move_to_element(cookies_button).perform()
-        time.sleep(1)
+        # click cookies button
+        click(en_continu_driver, self.cookies_xpath)
 
-        # Click the "Load More" button
-        cookies_button.click()
-
-        while not_encountered:
-            # Scroll to the bottom to trigger loading of more content
+        while True:
+            # Scroll to the bottom
             en_continu_driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-            time.sleep(1)
-
-            # Find the "Load More" button element
-            load_more_button = WebDriverWait(en_continu_driver, 10).until(
-                EC.element_to_be_clickable((By.XPATH, "//*[@id='reach-skip-nav']/div[4]/div/div/div/div/button"))
-            )
-            # Move to the element before clicking
-            actions = ActionChains(en_continu_driver)
-            actions.move_to_element(load_more_button).perform()
-            time.sleep(1)
-
-            # Click the "Load More" button
-            load_more_button.click()
-            print("Charger plus d'articles")
-            time.sleep(2)
+            time.sleep(0.5)
+            click(en_continu_driver, self.load_more_xpath)
+            print("Charger plus d'articles...")
             soup = BeautifulSoup(en_continu_driver.page_source, "lxml")
-            # Process and save the data as needed
-
+            # scrape and save the data
             articles_urls = [url.get('href') for url in soup.find_all('a') if "article" in url.get('href')]
             to_process_urls = set(articles_urls).difference(set(self.processed_urls))
             print(len(to_process_urls))
             if len(to_process_urls) > 0:
                 with Pool(processes=4) as pool:
-                    results = pool.map(self.get_article_content_multi, to_process_urls)
+                    results = pool.map(self.get_article_requests_multi, to_process_urls)
                     self.update_csv_multi(results, to_process_urls)
+        #en_continu_driver.quit()
 
-        en_continu_driver.quit()
-
-    def get_textual_content_from_xpath(self, driver, xpath):
-        wait = WebDriverWait(driver, 10)
-        try:
-            element = wait.until(EC.presence_of_element_located((By.XPATH, xpath)))
-            html = element.get_attribute('outerHTML')
-            soup = BeautifulSoup(html, 'lxml')
-            text = soup.get_text().strip()
-            cleaned_text = re.sub(r'\u00A0', ' ', text)
-            return cleaned_text
-        except Exception as e:
-            print(e)
-            return ""
-
-    def get_list_content_from_xpath(self, driver, xpath):
-        wait = WebDriverWait(driver, 10)
-        try:
-            element = wait.until(EC.presence_of_element_located((By.XPATH, xpath)))
-            html = element.get_attribute('outerHTML')
-            soup = BeautifulSoup(html, 'lxml')
-            ul_list = soup.find('ul')
-            return [li.text for li in ul_list.find_all('li')]
-        except Exception as e:
-            print(e)
-            return []
-
-    def get_article_content_multi(self, url):
-        driver = webdriver.Chrome()
+    def get_article_requests_multi(self, url: str) -> dict:
         complete_url = self.rtbf_url_prefix+url
-        driver.get(complete_url)
+        html_content = requests.get(complete_url).text
 
-        title = self.get_textual_content_from_xpath(driver, self.title_xpath)
-        date = self.get_textual_content_from_xpath(driver, self.date_xpath)
-        content = self.get_textual_content_from_xpath(driver, self.content_xpath)
-        reading_time = self.get_textual_content_from_xpath(driver, self.reading_time_xpath)
-        tags = self.get_list_content_from_xpath(driver, self.tags_xpath)
+        # Parse the HTML content and Extract date from JSON-LD script
+        soup = BeautifulSoup(html_content, 'html.parser')
+        json_ld_scripts = soup.find_all('script', type='application/ld+json')
 
-        d = datetime.today()
-        pattern = r'[\t\n]'
-        url_id = re.split("-", complete_url)[-1]
+        # Loop through each script to find the correct one
+        for script in json_ld_scripts:
+            try:
+                json_data = json.loads(script.string)
+                if json_data.get('@type') == 'NewsArticle' and 'datePublished' in json_data:
+                    d = datetime.today()
+                    url_id = re.split("-", complete_url)[-1]
 
-        data = {
-            'ID': url_id,
-            'URL': complete_url,
-            'Title': re.sub(pattern, ' ', title).replace("- RTBF Actus", ""),
-            'Text': re.sub(pattern, ' ', content),
-            'PublishDate': transform_date(date),
-            'Tags': ",".join(tags),
-            'ReadingTime': reading_time.replace("min", "").strip(),
-            'ExtractionDate': f"{d.day}/{d.month}/{d.year}"
-        }
+                    return {
+                        'ID': url_id,
+                        'URL': complete_url,
+                        'Title': html.unescape(json_data['headline']),
+                        'Text': html.unescape(json_data['articleBody']),
+                        'PublishDate': json_data['datePublished'],
+                        'ModifiedDate': json_data['dateModified'],
+                        'JournalistName': json_data['author']['name'],
+                        'ExtractionDate': f"{d.day}/{d.month}/{d.year}"
+                    }
 
-        driver.quit()
-        return data
+            except json.JSONDecodeError:
+                continue
 
-    def update_csv_multi(self, docs, urls):
+    def update_csv_multi(self, docs: list, urls: list):
         file_path = Path(self.dataset_file)
         if file_path.exists():
             df = pd.read_csv(self.dataset_file, sep="\t")
