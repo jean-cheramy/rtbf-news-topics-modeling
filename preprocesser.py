@@ -5,11 +5,11 @@ from datetime import datetime
 
 def clean_text(x):
     x = str(x)
-    for punct in "/-'":
+    for punct in "/-’'":
         x = x.replace(punct, ' ')
     for punct in '&':
         x = x.replace(punct, f' {punct} ')
-    for punct in '?!.,"#$%\'()*+-/:;<=>@[\\]^_`{|}~' + '“”’':
+    for punct in '?!.,"#$%()*+-/:;<=>@[\\]^_`{|}~' + '“”':
         x = x.replace(punct, '')
     x = re.sub('[0-9]{5,}', '#####', x)
     x = re.sub('[0-9]{4}', '####', x)
