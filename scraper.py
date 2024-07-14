@@ -16,9 +16,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
 
-# refactor code properly
-# add comments
-# stop scraping when encounters processed url
+# refactor and comments + method signature
 
 def click(driver, xpath: str):
     # Find the button
@@ -36,7 +34,7 @@ def click(driver, xpath: str):
 
 class Scraper:
     def __init__(self, rtbf_url: str):
-        self.dataset_file = "dataset_rtbf.csv"
+        self.dataset_file = "dataset/dataset_rtbf.csv"
         self.rtbf_url_prefix = "https://www.rtbf.be"
         self.en_continu_url = rtbf_url
         self.load_more_xpath = "//*[@id='reach-skip-nav']/div[4]/div/div/div/div/button"
@@ -48,7 +46,7 @@ class Scraper:
         except:
             self.processed_urls = set()
 
-    def scrape(self):
+    def scrape(self) -> None:
         en_continu_driver = webdriver.Chrome()
         en_continu_driver.get(self.en_continu_url)
         # click cookies button
@@ -57,8 +55,9 @@ class Scraper:
         while True:
             # Scroll to the bottom
             en_continu_driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-            time.sleep(0.5)
+            time.sleep(1)
             click(en_continu_driver, self.load_more_xpath)
+            time.sleep(1)
             print("Charger plus d'articles...")
             soup = BeautifulSoup(en_continu_driver.page_source, "lxml")
             # scrape and save the data
@@ -69,7 +68,9 @@ class Scraper:
                 with Pool(processes=4) as pool:
                     results = pool.map(self.get_article_requests_multi, to_process_urls)
                     self.update_csv_multi(results, to_process_urls)
-        #en_continu_driver.quit()
+            else:
+                en_continu_driver.quit()
+                break
 
     def get_article_requests_multi(self, url: str) -> dict:
         complete_url = self.rtbf_url_prefix+url
@@ -100,14 +101,16 @@ class Scraper:
 
             except json.JSONDecodeError:
                 continue
+        return {}
 
     def update_csv_multi(self, docs: list, urls: list):
         file_path = Path(self.dataset_file)
+        docs_non_empty = [d for d in docs if d]
         if file_path.exists():
             df = pd.read_csv(self.dataset_file, sep="\t")
-            new_df = pd.concat([df, pd.DataFrame(docs)], ignore_index=True)
+            new_df = pd.concat([df, pd.DataFrame(docs_non_empty)], ignore_index=True)
         else:
-            new_df = pd.DataFrame(docs)
+            new_df = pd.DataFrame(docs_non_empty)
         new_df.to_csv(self.dataset_file, index=False, encoding='utf-8', sep="\t")
         self.processed_urls.update(urls)
 
