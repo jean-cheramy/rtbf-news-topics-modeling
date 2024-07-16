@@ -43,6 +43,7 @@ https://public.tableau.com/views/RTBFactus/RTBFNews-Story?:language=fr-FR&:sid=0
 - Other:
   - improve exceptions management (depending on a production strategy)
   - plan to update the model with new scrapped articles to avoid training the model from scratch while updating
+  - lemmatize most frequents words to avoid words duplication (palestinien, palestiniens, palestiniennes -> palestinien)
 
 ## To Production
 - deploy python code into AWS lambdas + encapsulate them into Stepfunctions to manage errors and create a process:
