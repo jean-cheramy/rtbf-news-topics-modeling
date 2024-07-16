@@ -84,14 +84,14 @@ class RTBFScraper:
             # Click "Load More" button to fetch additional articles
             click(en_continu_driver, self.load_more_xpath)
             time.sleep(1)
-            print("Charger plus d'articles...")
+            print("Load more articles...")
             # Parse the current page HTML with BeautifulSoup
             soup = BeautifulSoup(en_continu_driver.page_source, "lxml")
             # Extract URLs of articles from anchor tags
             articles_urls = [url.get('href') for url in soup.find_all('a') if "article" in url.get('href')]
             # Filter out already processed URLs
             to_process_urls = set(articles_urls).difference(set(self.processed_urls))
-            print(len(to_process_urls))
+            print(f"{str(len(to_process_urls))} urls to process")
             if len(to_process_urls) > 0:
                 # Use multiprocessing to fetch article data concurrently
                 with Pool(processes=4) as pool:
