@@ -1,0 +1,621 @@
+TopicID,TopicName,Word,Probability
+-1,cette_comme_être,cette,0.006615110664486234
+-1,cette_comme_être,comme,0.005712220722500625
+-1,cette_comme_être,être,0.005405070212293732
+-1,cette_comme_être,tout,0.005393840245429966
+-1,cette_comme_être,aussi,0.005221007226789709
+-1,cette_comme_être,fait,0.005204921398440446
+-1,cette_comme_être,deux,0.0045051106612139
+-1,cette_comme_être,faire,0.004462311525400942
+-1,cette_comme_être,peut,0.004456550780173666
+-1,cette_comme_être,après,0.0044009998926163064
+0,parti_mr_élections,parti,0.014437863104647364
+0,parti_mr_élections,mr,0.01308847484468964
+0,parti_mr_élections,élections,0.012682771259185707
+0,parti_mr_élections,partis,0.0105930092124056
+0,parti_mr_élections,politique,0.010398182506845918
+0,parti_mr_élections,gouvernement,0.009599831630747352
+0,parti_mr_élections,droite,0.009355168976960877
+0,parti_mr_élections,président,0.008504255381918064
+0,parti_mr_élections,parlement,0.008174008295719721
+0,parti_mr_élections,ministre,0.00808854255840446
+1,festival_exposants_rue,festival,0.016596770934665054
+1,festival_exposants_rue,exposants,0.011075439641448309
+1,festival_exposants_rue,rue,0.011047132528394536
+1,festival_exposants_rue,artistes,0.007759549824021408
+1,festival_exposants_rue,art,0.007687450920726912
+1,festival_exposants_rue,lieu,0.007278780058366585
+1,festival_exposants_rue,musée,0.00723169982205586
+1,festival_exposants_rue,juin,0.007181473888778916
+1,festival_exposants_rue,brocante,0.007040986166104076
+1,festival_exposants_rue,édition,0.0067734852457730565
+2,euro_diables_match,euro,0.025130131550178153
+2,euro_diables_match,diables,0.018703873575653895
+2,euro_diables_match,match,0.01845504456008338
+2,euro_diables_match,face,0.012506000320226843
+2,euro_diables_match,diables rouges,0.01140787295899817
+2,euro_diables_match,équipe,0.011162349124921523
+2,euro_diables_match,joueurs,0.00996418608663891
+2,euro_diables_match,tedesco,0.009197586633333645
+2,euro_diables_match,finale,0.00917611154509367
+2,euro_diables_match,contre,0.008438244080240109
+3,tour_étape_tour franc,tour,0.030658230577023975
+3,tour_étape_tour franc,étape,0.028385456880851277
+3,tour_étape_tour franc,tour france,0.02141358722675334
+3,tour_étape_tour franc,pogacar,0.018618320051191857
+3,tour_étape_tour franc,france,0.015176920482379416
+3,tour_étape_tour franc,coureurs,0.014208516054967512
+3,tour_étape_tour franc,remco evenepoel,0.013201543492564659
+3,tour_étape_tour franc,course,0.012921863650999116
+3,tour_étape_tour franc,giro,0.011211342745594982
+3,tour_étape_tour franc,peloton,0.010872481184826262
+4,ukraine_russe_russie,ukraine,0.03431324489202191
+4,ukraine_russe_russie,russe,0.02580950750092366
+4,ukraine_russe_russie,russie,0.02548468115171489
+4,ukraine_russe_russie,russes,0.016571306008914575
+4,ukraine_russe_russie,guerre,0.013236507595412839
+4,ukraine_russe_russie,kiev,0.010989528607042089
+4,ukraine_russe_russie,président,0.010979434142929512
+4,ukraine_russe_russie,défense,0.01056028868213556
+4,ukraine_russe_russie,guerre ukraine,0.010407901988887743
+4,ukraine_russe_russie,ukrainien,0.010234877849389583
+5,album_rock_the,album,0.0235842823912692
+5,album_rock_the,rock,0.01480450188114477
+5,album_rock_the,the,0.013867389143561653
+5,album_rock_the,groupe,0.013528926995054367
+5,album_rock_the,musique,0.010082536309088909
+5,album_rock_the,single,0.007170202254620991
+5,album_rock_the,chanson,0.0070288354178353555
+5,album_rock_the,scène,0.0065975433374457475
+5,album_rock_the,titre,0.006394674268702091
+5,album_rock_the,cette,0.0063533027549911615
+6,film_cinéma_roman,film,0.02157474841493895
+6,film_cinéma_roman,cinéma,0.008805398289229641
+6,film_cinéma_roman,roman,0.008483950610053836
+6,film_cinéma_roman,comme,0.008000507966446892
+6,film_cinéma_roman,films,0.007574553270920141
+6,film_cinéma_roman,vie,0.007209477303372009
+6,film_cinéma_roman,cette,0.006915634521242322
+6,film_cinéma_roman,histoire,0.0064423785535891965
+6,film_cinéma_roman,livre,0.006297464182240625
+6,film_cinéma_roman,aussi,0.006056923753533404
+7,israël_hamas_guerre,israël,0.03883728302749815
+7,israël_hamas_guerre,hamas,0.0263245731151219
+7,israël_hamas_guerre,guerre,0.018944421587317614
+7,israël_hamas_guerre,israélienne,0.018492294645028363
+7,israël_hamas_guerre,palestiniens,0.016975265140580485
+7,israël_hamas_guerre,bande gaza,0.016911978226558377
+7,israël_hamas_guerre,palestinien,0.015785735491934336
+7,israël_hamas_guerre,rafah,0.013985356130126378
+7,israël_hamas_guerre,israélien,0.013601314987640912
+7,israël_hamas_guerre,armée israélienne,0.011279542720753401
+8,jeu_jeux_vidéo,jeu,0.03817518894575892
+8,jeu_jeux_vidéo,jeux,0.02760383483231008
+8,jeu_jeux_vidéo,vidéo,0.021588944578978163
+8,jeu_jeux_vidéo,joueurs,0.013787678673476564
+8,jeu_jeux_vidéo,jeu vidéo,0.013566634860132808
+8,jeu_jeux_vidéo,jeux vidéo,0.013147103688913898
+8,jeu_jeux_vidéo,plus,0.011777521647873953
+8,jeu_jeux_vidéo,studio,0.011708627834808295
+8,jeu_jeux_vidéo,pc,0.010011130415517953
+8,jeu_jeux_vidéo,games,0.009732775660093014
+9,jeux_olympiques_jeux olymp,jeux,0.0235853126220445
+9,jeux_olympiques_jeux olymp,olympiques,0.02094291517807195
+9,jeux_olympiques_jeux olymp,jeux olympiques,0.018683946399815285
+9,jeux_olympiques_jeux olymp,olympique,0.01684425418393868
+9,jeux_olympiques_jeux olymp,record,0.014946946826999975
+9,jeux_olympiques_jeux olymp,athlètes,0.012381882532474735
+9,jeux_olympiques_jeux olymp,relais,0.011959955649080655
+9,jeux_olympiques_jeux olymp,athlétisme,0.010848111503664276
+9,jeux_olympiques_jeux olymp,médaille,0.010199090335678958
+9,jeux_olympiques_jeux olymp,finale,0.009324156605641882
+10,garros_tournoi_finale,garros,0.031092627111254004
+10,garros_tournoi_finale,tournoi,0.01981980328540382
+10,garros_tournoi_finale,finale,0.019087680177072026
+10,garros_tournoi_finale,djokovic,0.017300435181156048
+10,garros_tournoi_finale,chelem,0.017043525094780174
+10,garros_tournoi_finale,grand chelem,0.017043525094780174
+10,garros_tournoi_finale,wimbledon,0.016736405967345987
+10,garros_tournoi_finale,tour,0.016493341413801012
+10,garros_tournoi_finale,mondial,0.01642544624211822
+10,garros_tournoi_finale,tennis,0.014533754379154329
+11,police_enquête_homme,police,0.019368716030602393
+11,police_enquête_homme,enquête,0.013639620216015162
+11,police_enquête_homme,homme,0.011237811896340818
+11,police_enquête_homme,deux,0.01043076542108076
+11,police_enquête_homme,prison,0.010191040902717097
+11,police_enquête_homme,victime,0.010184825619129789
+11,police_enquête_homme,meurtre,0.00925126996036578
+11,police_enquête_homme,procès,0.008051034010284586
+11,police_enquête_homme,personnes,0.007592258566084113
+11,police_enquête_homme,victimes,0.007363645518399866
+12,f1_verstappen_course,f1,0.035900777357930354
+12,f1_verstappen_course,verstappen,0.027100910656711708
+12,f1_verstappen_course,course,0.025312007576246635
+12,f1_verstappen_course,grand prix,0.02168109315833045
+12,f1_verstappen_course,pilote,0.020369190085041868
+12,f1_verstappen_course,ferrari,0.018753643796509258
+12,f1_verstappen_course,norris,0.018707159267324407
+12,f1_verstappen_course,red bull,0.01748829704382238
+12,f1_verstappen_course,bull,0.017474512647761932
+12,f1_verstappen_course,max verstappen,0.016935460697579202
+13,euros_emploi_belgique,euros,0.0142012259313421
+13,euros_emploi_belgique,emploi,0.01231345771185059
+13,euros_emploi_belgique,belgique,0.00982819049099357
+13,euros_emploi_belgique,travail,0.008817565722692803
+13,euros_emploi_belgique,taux,0.008542691236311526
+13,euros_emploi_belgique,impôt,0.007483900232488173
+13,euros_emploi_belgique,impôts,0.007024269045006354
+13,euros_emploi_belgique,millions,0.006820678916406289
+13,euros_emploi_belgique,entreprises,0.006770209732463509
+13,euros_emploi_belgique,milliards,0.006580723868467722
+14,travaux_circulatio_bus,travaux,0.02047169723400367
+14,travaux_circulatio_bus,circulation,0.019257272450537665
+14,travaux_circulatio_bus,bus,0.014885703292896079
+14,travaux_circulatio_bus,chantier,0.014833766895774493
+14,travaux_circulatio_bus,tunnel,0.014108083168319949
+14,travaux_circulatio_bus,pont,0.013497492317163946
+14,travaux_circulatio_bus,train,0.012164812532812838
+14,travaux_circulatio_bus,trains,0.011936457938035286
+14,travaux_circulatio_bus,tram,0.011897983565209927
+14,travaux_circulatio_bus,trafic,0.011548797018363153
+15,températur_ciel_après midi,températures,0.029745121298891085
+15,températur_ciel_après midi,ciel,0.028985934759434572
+15,températur_ciel_après midi,après midi,0.0258665089706153
+15,températur_ciel_après midi,nuages,0.025201473309627742
+15,températur_ciel_après midi,temps,0.021232250128354977
+15,températur_ciel_après midi,météo,0.018800714168576697
+15,températur_ciel_après midi,ouest,0.016688750681849298
+15,températur_ciel_après midi,matinée,0.016366209995992403
+15,températur_ciel_après midi,pluie,0.015836106603124935
+15,températur_ciel_après midi,nuageux,0.015317936670423563
+16,concours_violon_elisabeth,concours,0.05169025279930845
+16,concours_violon_elisabeth,violon,0.03756261354150313
+16,concours_violon_elisabeth,elisabeth,0.03477402958780848
+16,concours_violon_elisabeth,concours reine,0.032535208997866875
+16,concours_violon_elisabeth,concerto,0.030982429430984396
+16,concours_violon_elisabeth,majeur,0.022237016723694377
+16,concours_violon_elisabeth,sonate,0.021955686059341454
+16,concours_violon_elisabeth,orchestre,0.02167412340645673
+16,concours_violon_elisabeth,finale,0.02159628365481614
+16,concours_violon_elisabeth,violoniste,0.018235526377230263
+17,huile_recette_asperges,huile,0.020045978553714545
+17,huile_recette_asperges,recette,0.01893937548858442
+17,huile_recette_asperges,asperges,0.018531860282645484
+17,huile_recette_asperges,beurre,0.016345987976694083
+17,huile_recette_asperges,olive,0.014607819221067499
+17,huile_recette_asperges,huile olive,0.014438095791223092
+17,huile_recette_asperges,pâtes,0.014392055433022051
+17,huile_recette_asperges,pâte,0.013464410218851789
+17,huile_recette_asperges,poivre,0.013346324345244154
+17,huile_recette_asperges,œufs,0.011692238200432331
+18,projet_logements_logement,projet,0.01813998514604096
+18,projet_logements_logement,logements,0.01589314465501409
+18,projet_logements_logement,logement,0.015138885073420209
+18,projet_logements_logement,appartements,0.00973293874221596
+18,projet_logements_logement,commune,0.009593049516513005
+18,projet_logements_logement,région,0.00916328204503475
+18,projet_logements_logement,quartier,0.009156858533249464
+18,projet_logements_logement,parc,0.008674877552082405
+18,projet_logements_logement,euros,0.008546146099875557
+18,projet_logements_logement,immobilier,0.008449573648471964
+19,rwanda_rwandais_personnes,rwanda,0.03373135196879759
+19,rwanda_rwandais_personnes,rwandais,0.0156590249745104
+19,rwanda_rwandais_personnes,personnes,0.012526956934463674
+19,rwanda_rwandais_personnes,génocide,0.011828269094065017
+19,rwanda_rwandais_personnes,morts,0.011521539290089693
+19,rwanda_rwandais_personnes,kenya,0.010362590056661295
+19,rwanda_rwandais_personnes,migrants,0.0093742603599251
+19,rwanda_rwandais_personnes,congo,0.009198015507598294
+19,rwanda_rwandais_personnes,gouvernement,0.009176418025039036
+19,rwanda_rwandais_personnes,kigali,0.00908480199719591
+20,santé_être_patients,santé,0.012095739015720407
+20,santé_être_patients,être,0.011741804736138766
+20,santé_être_patients,patients,0.008496909321707824
+20,santé_être_patients,étude,0.008092641339778713
+20,santé_être_patients,vie,0.007829947961372851
+20,santé_être_patients,cerveau,0.007745399558265047
+20,santé_être_patients,peuvent,0.00732222859646878
+20,santé_être_patients,maladie,0.0072856231339519075
+20,santé_être_patients,personnes,0.0071245168879593024
+20,santé_être_patients,stress,0.006971235014913436
+21,police_drogue_cocaïne,police,0.026780800487386184
+21,police_drogue_cocaïne,drogue,0.024307118395458086
+21,police_drogue_cocaïne,cocaïne,0.021948656852149088
+21,police_drogue_cocaïne,trafic,0.018860577409400496
+21,police_drogue_cocaïne,drogues,0.016214890286318874
+21,police_drogue_cocaïne,stupéfiants,0.014798619374433148
+21,police_drogue_cocaïne,port,0.009277604206276883
+21,police_drogue_cocaïne,criminels,0.009227278597786779
+21,police_drogue_cocaïne,policiers,0.008674343926435502
+21,police_drogue_cocaïne,perquisitions,0.007783775707605894
+22,eurovision_finale_concours,eurovision,0.08007580178576428
+22,eurovision_finale_concours,finale,0.036598536798493835
+22,eurovision_finale_concours,concours,0.03291007426796734
+22,eurovision_finale_concours,malmö,0.026634363525493414
+22,eurovision_finale_concours,chanson,0.025507623785662802
+22,eurovision_finale_concours,demi finale,0.025227151901302636
+22,eurovision_finale_concours,demi,0.02277583308631902
+22,eurovision_finale_concours,concours eurovision,0.022267598730373053
+22,eurovision_finale_concours,suède,0.016828458385263784
+22,eurovision_finale_concours,eurovision chanson,0.015823346186967447
+23,école_élèves_enseigneme,école,0.023866010023072818
+23,école_élèves_enseigneme,élèves,0.023397598443251212
+23,école_élèves_enseigneme,enseignement,0.020896389575115314
+23,école_élèves_enseigneme,enseignants,0.019161559919603808
+23,école_élèves_enseigneme,étudiants,0.016033058200235477
+23,école_élèves_enseigneme,écoles,0.01273429109387919
+23,école_élèves_enseigneme,scolaire,0.011975289491217352
+23,école_élèves_enseigneme,année,0.01045998153838542
+23,école_élèves_enseigneme,professeurs,0.008989535241325024
+23,école_élèves_enseigneme,enfants,0.008756898790047504
+24,rallye_neuville_hyundai,rallye,0.058743067672147396
+24,rallye_neuville_hyundai,neuville,0.051288294322144184
+24,rallye_neuville_hyundai,hyundai,0.03795762925856718
+24,rallye_neuville_hyundai,wrc,0.03309517985770508
+24,rallye_neuville_hyundai,championnat,0.027711858397618427
+24,rallye_neuville_hyundai,rallyes,0.022203576875808796
+24,rallye_neuville_hyundai,championnat monde,0.02007037992906972
+24,rallye_neuville_hyundai,sébastien,0.019488148105210403
+24,rallye_neuville_hyundai,sardaigne,0.01808230747890146
+24,rallye_neuville_hyundai,points,0.01788615161303363
+25,madrid_real madri_champions,madrid,0.027774838373814486
+25,madrid_real madri_champions,real madrid,0.024204499908495065
+25,madrid_real madri_champions,champions,0.022395648873209537
+25,madrid_real madri_champions,courtois,0.01961341396058634
+25,madrid_real madri_champions,ligue,0.0189542616482118
+25,madrid_real madri_champions,ligue champions,0.018940421492956754
+25,madrid_real madri_champions,club,0.01681938641770636
+25,madrid_real madri_champions,ancelotti,0.01606381803520637
+25,madrid_real madri_champions,finale,0.014672705655373075
+25,madrid_real madri_champions,entraîneur,0.013962071941822259
+26,intelligen_artificiel_intelligen,intelligence artificielle,0.015324024537113769
+26,intelligen_artificiel_intelligen,artificielle,0.015276986159194107
+26,intelligen_artificiel_intelligen,intelligence,0.015076485504420579
+26,intelligen_artificiel_intelligen,chatgpt,0.014392169047174096
+26,intelligen_artificiel_intelligen,réseaux,0.011159049412626678
+26,intelligen_artificiel_intelligen,sociaux,0.010901392208479112
+26,intelligen_artificiel_intelligen,réseaux sociaux,0.0103733873508311
+26,intelligen_artificiel_intelligen,données,0.009418388322680491
+26,intelligen_artificiel_intelligen,openai,0.009398768258207037
+26,intelligen_artificiel_intelligen,internet,0.008938252571468403
+27,animaux_espèces_espèce,animaux,0.015219843918810915
+27,animaux_espèces_espèce,espèces,0.01338975037116299
+27,animaux_espèces_espèce,espèce,0.01316039478927178
+27,animaux_espèces_espèce,moustiques,0.012138643024051073
+27,animaux_espèces_espèce,oiseaux,0.010893300525601715
+27,animaux_espèces_espèce,animal,0.010389807547034629
+27,animaux_espèces_espèce,miel,0.0102757803615615
+27,animaux_espèces_espèce,baleine,0.008649772582736533
+27,animaux_espèces_espèce,lynx,0.008078879476747538
+27,animaux_espèces_espèce,nid,0.007931452586594672
+28,club_union_club bruge,club,0.025979299777703208
+28,club_union_club bruge,union,0.024324236990606304
+28,club_union_club bruge,club bruges,0.020227899162568515
+28,club_union_club bruge,match,0.016055207418422368
+28,club_union_club bruge,antwerp,0.015360022956094649
+28,club_union_club bruge,saison,0.014475790728759598
+28,club_union_club bruge,hayen,0.014432901773936462
+28,club_union_club bruge,league,0.012749933852956613
+28,club_union_club bruge,nicky hayen,0.01179230681593334
+28,club_union_club bruge,finale,0.011788308587780133
+29,spatiale_lune_espace,spatiale,0.02849650801640842
+29,spatiale_lune_espace,lune,0.022564855921262034
+29,spatiale_lune_espace,espace,0.019476912073154135
+29,spatiale_lune_espace,astronautes,0.019326362811801067
+29,spatiale_lune_espace,spatial,0.01737163987252574
+29,spatiale_lune_espace,orbite,0.016995837868048477
+29,spatiale_lune_espace,fusée,0.016176362177287407
+29,spatiale_lune_espace,télescope,0.015988801131264906
+29,spatiale_lune_espace,vaisseau,0.01592016937960952
+29,spatiale_lune_espace,mission,0.015389239287881345
+30,jardin_plantes_fleurs,jardin,0.03265907379845318
+30,jardin_plantes_fleurs,plantes,0.02912785547379757
+30,jardin_plantes_fleurs,fleurs,0.027227671761477407
+30,jardin_plantes_fleurs,jardins,0.022554329622660615
+30,jardin_plantes_fleurs,plante,0.011945438505881527
+30,jardin_plantes_fleurs,fruits,0.010007565685746362
+30,jardin_plantes_fleurs,feuilles,0.009661526961142627
+30,jardin_plantes_fleurs,plants,0.009494124934391172
+30,jardin_plantes_fleurs,floraison,0.009124545881025568
+30,jardin_plantes_fleurs,eau,0.009027495652493483
+31,apple_iphone_ipad,apple,0.0819320417701981
+31,apple_iphone_ipad,iphone,0.03615770729169653
+31,apple_iphone_ipad,ipad,0.025779748558085243
+31,apple_iphone_ipad,android,0.018541068772835703
+31,apple_iphone_ipad,smartphone,0.018534403182333792
+31,apple_iphone_ipad,applications,0.017884788766921234
+31,apple_iphone_ipad,appareil,0.016093817377255473
+31,apple_iphone_ipad,google,0.01530761917453199
+31,apple_iphone_ipad,écran,0.014194913130371177
+31,apple_iphone_ipad,téléphone,0.013638375396829393
+32,eau_tourisme_ville,eau,0.013650799122461088
+32,eau_tourisme_ville,tourisme,0.011034607720568248
+32,eau_tourisme_ville,ville,0.010678676086821421
+32,eau_tourisme_ville,touristes,0.010630767840795433
+32,eau_tourisme_ville,habitants,0.008715128891237291
+32,eau_tourisme_ville,voyage,0.008629406606979194
+32,eau_tourisme_ville,philippe,0.00803450272030844
+32,eau_tourisme_ville,lac,0.007698576023705053
+32,eau_tourisme_ville,fleuve,0.007651196946868692
+32,eau_tourisme_ville,île,0.007446084493119247
+33,jodie_jodie devo_devos,jodie,0.03163549891003282
+33,jodie_jodie devo_devos,jodie devos,0.021895941050167407
+33,jodie_jodie devo_devos,devos,0.02133622700290473
+33,jodie_jodie devo_devos,âge ans,0.019052018017249532
+33,jodie_jodie devo_devos,décédé,0.016748278363293435
+33,jodie_jodie devo_devos,âge,0.01652128549017047
+33,jodie_jodie devo_devos,françoise hardy,0.016348235773971327
+33,jodie_jodie devo_devos,françoise,0.014857711180001405
+33,jodie_jodie devo_devos,décédée,0.01132016089904869
+33,jodie_jodie devo_devos,mort,0.011204672030858462
+34,anderlecht_riemer_match,anderlecht,0.05807269953834568
+34,anderlecht_riemer_match,riemer,0.024345569838152607
+34,anderlecht_riemer_match,match,0.0212131315884642
+34,anderlecht_riemer_match,brian riemer,0.018286745941946753
+34,anderlecht_riemer_match,genk,0.015271770570344945
+34,anderlecht_riemer_match,club,0.015128385606529633
+34,anderlecht_riemer_match,sporting,0.015017028488174952
+34,anderlecht_riemer_match,titre,0.014951455897005217
+34,anderlecht_riemer_match,saison,0.009950919209531466
+34,anderlecht_riemer_match,championnat,0.009264856860270579
+35,jazz_violon_musique,jazz,0.0282065516414518
+35,jazz_violon_musique,violon,0.022958141168952468
+35,jazz_violon_musique,musique,0.021893023791436227
+35,jazz_violon_musique,orchestre,0.020095849125903432
+35,jazz_violon_musique,piano,0.01712590507876789
+35,jazz_violon_musique,concerto,0.014005726207828363
+35,jazz_violon_musique,compositeur,0.013523933505683981
+35,jazz_violon_musique,pianiste,0.012758643605800481
+35,jazz_violon_musique,violoniste,0.0126487263909024
+35,jazz_violon_musique,musiciens,0.009838374734841704
+36,aéroport_passagers_airport,aéroport,0.04462062784755879
+36,aéroport_passagers_airport,passagers,0.02005362360156297
+36,aéroport_passagers_airport,airport,0.01981145810577976
+36,aéroport_passagers_airport,aérien,0.01644265389485481
+36,aéroport_passagers_airport,avion,0.015407323900701354
+36,aéroport_passagers_airport,airlines,0.015202269585473762
+36,aéroport_passagers_airport,brussels airport,0.015165796619341447
+36,aéroport_passagers_airport,aéroport charleroi,0.012641984262144947
+36,aéroport_passagers_airport,brussels airlines,0.011938308553809143
+36,aéroport_passagers_airport,charleroi,0.011117299123457193
+37,incendie_pompiers_feu,incendie,0.05559797868276619
+37,incendie_pompiers_feu,pompiers,0.04739972274658243
+37,incendie_pompiers_feu,feu,0.01827037492036735
+37,incendie_pompiers_feu,bâtiment,0.0157802480716076
+37,incendie_pompiers_feu,kennedy,0.014045125945048836
+37,incendie_pompiers_feu,fumée,0.013170485938514684
+37,incendie_pompiers_feu,habitants,0.010841998874537448
+37,incendie_pompiers_feu,immeuble,0.010580575588681028
+37,incendie_pompiers_feu,police,0.010453510905108501
+37,incendie_pompiers_feu,incendie déclaré,0.010215818927270135
+38,trump_donald tru_procès,trump,0.0867248467245959
+38,trump_donald tru_procès,donald trump,0.06778554755726439
+38,trump_donald tru_procès,procès,0.03302602190905716
+38,trump_donald tru_procès,président,0.02651582542693377
+38,trump_donald tru_procès,présidentielle,0.018452993199408105
+38,trump_donald tru_procès,new york,0.01629855626680743
+38,trump_donald tru_procès,york,0.016267995746999164
+38,trump_donald tru_procès,campagne,0.01574159872631203
+38,trump_donald tru_procès,stormy daniels,0.015714908485548636
+38,trump_donald tru_procès,stormy,0.015634630960989496
+39,nba_points_dallas,nba,0.05922261993811679
+39,nba_points_dallas,points,0.041475572760251406
+39,nba_points_dallas,dallas,0.026916972407591125
+39,nba_points_dallas,boston,0.024974698719730244
+39,nba_points_dallas,minnesota,0.022982902389121186
+39,nba_points_dallas,rebonds,0.020377341317405016
+39,nba_points_dallas,lakers,0.01830865494962993
+39,nba_points_dallas,play offs,0.018007625886942928
+39,nba_points_dallas,offs,0.01799326640101183
+39,nba_points_dallas,denver,0.0174785949898501
+40,normandie_guerre_soldats,normandie,0.01962154151639629
+40,normandie_guerre_soldats,guerre,0.01894035127376515
+40,normandie_guerre_soldats,soldats,0.015638253982664253
+40,normandie_guerre_soldats,day,0.013956946768541017
+40,normandie_guerre_soldats,bataille,0.010031150663797131
+40,normandie_guerre_soldats,plages,0.009018220568373815
+40,normandie_guerre_soldats,alliés,0.008953652026728596
+40,normandie_guerre_soldats,juin,0.008721531292079745
+40,normandie_guerre_soldats,guerre mondiale,0.00862269315105082
+40,normandie_guerre_soldats,débarquement normandie,0.007970648533551802
+41,standard_club_supporters,standard,0.051457107090189975
+41,standard_club_supporters,club,0.0376232023983064
+41,standard_club_supporters,supporters,0.023031999922629044
+41,standard_club_supporters,joueurs,0.018685776452455026
+41,standard_club_supporters,partners,0.016341401519874746
+41,standard_club_supporters,saison,0.013555975751874672
+41,standard_club_supporters,westerlo,0.012305620908354357
+41,standard_club_supporters,liégeois,0.012204592587862613
+41,standard_club_supporters,rouches,0.011592800155890152
+41,standard_club_supporters,situation,0.011000626913586421
+42,inondation_eau_cours eau,inondations,0.04318672553390767
+42,inondation_eau_cours eau,eau,0.026572890225716676
+42,inondation_eau_cours eau,cours eau,0.014210433014584254
+42,inondation_eau_cours eau,commune,0.012453165566991019
+42,inondation_eau_cours eau,walhain,0.012205892987058408
+42,inondation_eau_cours eau,dégâts,0.011870856078711
+42,inondation_eau_cours eau,plus,0.010071222433199701
+42,inondation_eau_cours eau,intempéries,0.00981301857178957
+42,inondation_eau_cours eau,catastrophe,0.009464931231985378
+42,inondation_eau_cours eau,pluie,0.009330635829637276
+43,femmes_sexuelles_hommes,femmes,0.02530788453576348
+43,femmes_sexuelles_hommes,sexuelles,0.011187776034354028
+43,femmes_sexuelles_hommes,hommes,0.009748664584225783
+43,femmes_sexuelles_hommes,sexualité,0.009728823414617855
+43,femmes_sexuelles_hommes,violences,0.00894909043810939
+43,femmes_sexuelles_hommes,femme,0.008160541261132238
+43,femmes_sexuelles_hommes,actualité,0.007835829276552875
+43,femmes_sexuelles_hommes,féministe,0.007721127544362677
+43,femmes_sexuelles_hommes,sexuelle,0.007375922310469622
+43,femmes_sexuelles_hommes,we trust,0.006893745288945464
+44,the voice_voice_voice belg,the voice,0.08312835704637185
+44,the voice_voice_voice belg,voice,0.08140559798978549
+44,the voice_voice_voice belg,voice belgique,0.0764499811538074
+44,the voice_voice_voice belg,belgique,0.0361874380925012
+44,the voice_voice_voice belg,finale,0.03559382367464747
+44,the voice_voice_voice belg,saison the,0.03490580141770972
+44,the voice_voice_voice belg,auvio,0.02973438874775534
+44,the voice_voice_voice belg,alyah,0.025008556981825626
+44,the voice_voice_voice belg,finale the,0.02391421330913899
+44,the voice_voice_voice belg,titre,0.023173428443356694
+45,produits_alimentair_sucre,produits,0.015215649740763398
+45,produits_alimentair_sucre,alimentaire,0.013416400754504756
+45,produits_alimentair_sucre,sucre,0.013311643642013279
+45,produits_alimentair_sucre,santé,0.012934648476774765
+45,produits_alimentair_sucre,aliments,0.012284094043806737
+45,produits_alimentair_sucre,alimentation,0.011018534325450767
+45,produits_alimentair_sucre,peau,0.010415557812383144
+45,produits_alimentair_sucre,crème,0.009477176893953186
+45,produits_alimentair_sucre,gluten,0.009273817350556011
+45,produits_alimentair_sucre,odeurs,0.00850879611991701
+46,iran_israël_attaque,iran,0.06737229354451464
+46,iran_israël_attaque,israël,0.02833954526417734
+46,iran_israël_attaque,attaque,0.021083571181646218
+46,iran_israël_attaque,iranien,0.02019595986624585
+46,iran_israël_attaque,président,0.019266389340920297
+46,iran_israël_attaque,nucléaire,0.017642401615029456
+46,iran_israël_attaque,iranienne,0.015575603831325124
+46,iran_israël_attaque,islamique,0.015021444052966525
+46,iran_israël_attaque,ebrahim raïssi,0.014661116526493554
+46,iran_israël_attaque,ebrahim,0.014593818888501814
+47,vélo_vélos_cyclistes,vélo,0.0774698799056745
+47,vélo_vélos_cyclistes,vélos,0.04165479887559206
+47,vélo_vélos_cyclistes,cyclistes,0.02458889290692881
+47,vélo_vélos_cyclistes,deux roues,0.01404009162263074
+47,vélo_vélos_cyclistes,plus,0.012447159574930236
+47,vélo_vélos_cyclistes,mobilité,0.011896114649626179
+47,vélo_vélos_cyclistes,cycliste,0.010793409867779444
+47,vélo_vélos_cyclistes,aussi,0.008089650671805905
+47,vélo_vélos_cyclistes,deux,0.007878465911027923
+47,vélo_vélos_cyclistes,cyclable,0.007030436941999926
+48,city_manchester_manchester,city,0.04818053125692317
+48,city_manchester_manchester,manchester,0.046144998014372565
+48,city_manchester_manchester,manchester city,0.039370963868708204
+48,city_manchester_manchester,premier league,0.03616818003745298
+48,city_manchester_manchester,league,0.032409565134088276
+48,city_manchester_manchester,arsenal,0.030925691249018696
+48,city_manchester_manchester,guardiola,0.02277267048378555
+48,city_manchester_manchester,bruyne,0.021487984485714248
+48,city_manchester_manchester,chelsea,0.016071275785015816
+48,city_manchester_manchester,champions,0.013511544224159074
+49,chien_chiens_animal,chien,0.057158209538517926
+49,chien_chiens_animal,chiens,0.03921676959297924
+49,chien_chiens_animal,animal,0.02959168583794158
+49,chien_chiens_animal,animaux,0.029511700078691278
+49,chien_chiens_animal,vétérinaire,0.013090555410763545
+49,chien_chiens_animal,animale,0.01055554251401409
+49,chien_chiens_animal,être,0.009897854943620214
+49,chien_chiens_animal,peut,0.00924848480767755
+49,chien_chiens_animal,comme,0.008581728245551718
+49,chien_chiens_animal,chiot,0.008276580781528353
+50,grève_syndicats_bpost,grève,0.07921604444228536
+50,grève_syndicats_bpost,syndicats,0.03751468506373047
+50,grève_syndicats_bpost,bpost,0.024237745134702185
+50,grève_syndicats_bpost,personnel,0.02007210619091182
+50,grève_syndicats_bpost,prisons,0.019865954576955988
+50,grève_syndicats_bpost,mouvement grève,0.015579271570767167
+50,grève_syndicats_bpost,préavis grève,0.014736996171117976
+50,grève_syndicats_bpost,syndicat,0.014083852194397286
+50,grève_syndicats_bpost,journaux,0.013513456259143283
+50,grève_syndicats_bpost,lundi,0.01326245016391614
+51,pape_roi_prince,pape,0.04238822826010625
+51,pape_roi_prince,roi,0.025655497850286743
+51,pape_roi_prince,prince,0.02246616772704536
+51,pape_roi_prince,charles,0.01988946315879548
+51,pape_roi_prince,charles iii,0.019598495782089036
+51,pape_roi_prince,visite,0.019319468087402036
+51,pape_roi_prince,pape françois,0.018530726751915635
+51,pape_roi_prince,princesse,0.01765884917478955
+51,pape_roi_prince,kate,0.017140927622062853
+51,pape_roi_prince,palais,0.014500744797589012
+52,kopecky_lotte kope_étape,kopecky,0.07409948757691036
+52,kopecky_lotte kope_étape,lotte kopecky,0.05097322208034108
+52,kopecky_lotte kope_étape,étape,0.038674040518216185
+52,kopecky_lotte kope_étape,vollering,0.03639222087566007
+52,kopecky_lotte kope_étape,worx,0.033678550540190595
+52,kopecky_lotte kope_étape,longo,0.031808371592179994
+52,kopecky_lotte kope_étape,longo borghini,0.031238474893500713
+52,kopecky_lotte kope_étape,worx protime,0.025430781155773404
+52,kopecky_lotte kope_étape,tour,0.022174316072694395
+52,kopecky_lotte kope_étape,néerlandaise,0.02210350322861671
+53,joe biden_trump_donald tru,joe biden,0.06388004552821434
+53,joe biden_trump_donald tru,trump,0.05485755543635588
+53,joe biden_trump_donald tru,donald trump,0.04328792834409822
+53,joe biden_trump_donald tru,démocrate,0.032821304986326405
+53,joe biden_trump_donald tru,président,0.032274474630169366
+53,joe biden_trump_donald tru,républicain,0.022325336474337154
+53,joe biden_trump_donald tru,débat,0.01891555248714641
+53,joe biden_trump_donald tru,présidentielle,0.01824921642685428
+53,joe biden_trump_donald tru,président américain,0.016550541427168147
+53,joe biden_trump_donald tru,candidat,0.014934401500916177
+54,pedro_pedro sánc_espagne,pedro,0.03947060416341095
+54,pedro_pedro sánc_espagne,pedro sánchez,0.027654490251410924
+54,pedro_pedro sánc_espagne,espagne,0.02153521440408927
+54,pedro_pedro sánc_espagne,carles puigdemont,0.021487631311952977
+54,pedro_pedro sánc_espagne,espagnol,0.020917861479931393
+54,pedro_pedro sánc_espagne,gouvernement,0.01984753090192408
+54,pedro_pedro sánc_espagne,amnistie,0.01825070035741913
+54,pedro_pedro sánc_espagne,président,0.015700887726652468
+54,pedro_pedro sánc_espagne,indépendantistes,0.015619091263761382
+54,pedro_pedro sánc_espagne,sanchez,0.01535979862153201
+55,cactus_cactus tou_vivacité t,cactus,0.08306365913143332
+55,cactus_cactus tou_vivacité t,cactus tous,0.03476506330532622
+55,cactus_cactus tou_vivacité t,vivacité télé,0.03476506330532622
+55,cactus_cactus tou_vivacité t,suivez cactus,0.03476506330532622
+55,cactus_cactus tou_vivacité t,humour suivez,0.03476506330532622
+55,cactus_cactus tou_vivacité t,vendredi radio,0.03476506330532622
+55,cactus_cactus tou_vivacité t,télé replay,0.03476506330532622
+55,cactus_cactus tou_vivacité t,matins 8h,0.03476506330532622
+55,cactus_cactus tou_vivacité t,moments humour,0.03468444201202276
+55,cactus_cactus tou_vivacité t,8h lundi,0.03380859195001957
+56,boum_chanteuse_katy,boum,0.037121059060595006
+56,boum_chanteuse_katy,chanteuse,0.018607679866350042
+56,boum_chanteuse_katy,katy,0.017146010647925303
+56,boum_chanteuse_katy,perry,0.016314443745845102
+56,boum_chanteuse_katy,katy perry,0.01591450120119547
+56,boum_chanteuse_katy,madonna,0.014491660009033529
+56,boum_chanteuse_katy,kesha,0.014152974480908524
+56,boum_chanteuse_katy,ariana,0.012350270064608877
+56,boum_chanteuse_katy,star,0.012177533100681459
+56,boum_chanteuse_katy,ariana grande,0.010342340860009566
+57,pfas_eau_chièvres,pfas,0.06943060896604565
+57,pfas_eau_chièvres,eau,0.034286903036369665
+57,pfas_eau_chièvres,chièvres,0.02919791807460871
+57,pfas_eau_chièvres,résultats,0.02551575774721268
+57,pfas_eau_chièvres,pollution,0.017693710094536286
+57,pfas_eau_chièvres,santé,0.01728950011980831
+57,pfas_eau_chièvres,environnement,0.015068032293739415
+57,pfas_eau_chièvres,scientifique,0.01457461247584533
+57,pfas_eau_chièvres,polluants,0.012970941817086355
+57,pfas_eau_chièvres,analyses,0.01254188768900289
+58,swift_taylor swi_taylor,swift,0.07242430883866546
+58,swift_taylor swi_taylor,taylor swift,0.0708622390533684
+58,swift_taylor swi_taylor,taylor,0.07012656142283376
+58,swift_taylor swi_taylor,album,0.020576279513026933
+58,swift_taylor swi_taylor,chanteuse,0.0190454481490785
+58,swift_taylor swi_taylor,gaga,0.01485516402107533
+58,swift_taylor swi_taylor,lady gaga,0.01349334242590316
+58,swift_taylor swi_taylor,albums,0.011638963296411576
+58,swift_taylor swi_taylor,lady,0.011585806717678887
+58,swift_taylor swi_taylor,swifties,0.011367905808355712
+59,goffin_david goff_tableau fi,goffin,0.10328339372020807
+59,goffin_david goff_tableau fi,david goffin,0.06867546272956256
+59,goffin_david goff_tableau fi,tableau final,0.026615511994809563
+59,goffin_david goff_tableau fi,tour,0.026018258399545642
+59,goffin_david goff_tableau fi,break,0.02313990914123552
+59,goffin_david goff_tableau fi,qualifications,0.02264546886864654
+59,goffin_david goff_tableau fi,tournoi,0.020719048699841022
+59,goffin_david goff_tableau fi,roland garros,0.01992383821876561
+59,goffin_david goff_tableau fi,garros,0.019909332172487443
+59,goffin_david goff_tableau fi,challenger,0.019349365317959524
+60,liste_voix liste_résultats,liste,0.18552191205947582
+60,liste_voix liste_résultats,voix liste,0.12028105057783167
+60,liste_voix liste_résultats,résultats,0.07581670541642622
+60,liste_voix liste_résultats,derrière liste,0.07117535349288047
+60,liste_voix liste_résultats,bureaux dépouillés,0.0708850921613728
+60,liste_voix liste_résultats,suit voix,0.0708850921613728
+60,liste_voix liste_résultats,devant liste,0.07060376716645057
+60,liste_voix liste_résultats,tête voix,0.07006583806167135
+60,liste_voix liste_résultats,voix devant,0.06955782342161988
+60,liste_voix liste_résultats,voix résultats,0.06880284170978446
