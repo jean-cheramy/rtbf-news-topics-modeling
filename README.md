@@ -28,7 +28,7 @@ https://public.tableau.com/views/RTBFactus/RTBFNews-Story?:language=fr-FR&:sid=0
 
 ## Improvements:
 - Performance:
-  - performance optimization for model training (production strategy to handle larger and growing datasets): joblib, concurrency
+  - performance optimization for model training (parallelize computations and speed up training to handle larger and growing datasets)
   - improve sorting function for larger datasets
 - Accuracy:
   - take articles updates into account to update the record in the dataset
