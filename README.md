@@ -1,5 +1,4 @@
 # becode-ds-challenge
-Hiring challenge for the position of Data Science coach.
 
 This repository contains Python scripts for scraping the RTBF en-continu website and performing topic modeling on the collected articles.
 
