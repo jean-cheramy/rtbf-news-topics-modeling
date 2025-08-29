@@ -1,4 +1,4 @@
-# becode-ds-challenge
+# rtbf news scraping and topics modeling
 
 This repository contains Python scripts for scraping the RTBF en-continu website and performing topic modeling on the collected articles.
 
